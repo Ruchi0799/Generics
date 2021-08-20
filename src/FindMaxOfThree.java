@@ -1,3 +1,5 @@
+import com.sun.xml.internal.fastinfoset.util.StringArray;
+
 public class FindMaxOfThree {
 
     public static int Findmax(Integer[] intArray){
@@ -28,9 +30,24 @@ public class FindMaxOfThree {
 
     }
 
+    public static String Findmax2(String[] stringArray){
+        String max=stringArray[0];
+        if(stringArray[1].compareTo(max)>0)
+        {
+            max=stringArray[1];
+        }
+        if (stringArray[2].compareTo(max)>0)
+        {
+            max=stringArray[2];
+        }
+        return max;
+
+    }
+
     public static void main(String[] args) {
         Integer[] intArray={4,7,1};
         Float[] floatArray={4.5f,5.0f,6.2f};
+        String[] stringArray={"Ruchi","Ravindra","Mandve"};
 
 
         int maxnumint=Findmax(intArray);
@@ -38,6 +55,9 @@ public class FindMaxOfThree {
 
         float maxnumfloat=Findmax1(floatArray);
         System.out.println("Max Float is: "+maxnumfloat);
+
+        String maxString=Findmax2(stringArray);
+        System.out.println("Max String is: "+maxString);
 
 
     }
